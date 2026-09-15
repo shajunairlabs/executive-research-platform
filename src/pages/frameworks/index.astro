@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardGrid from '../components/CardGrid.astro';
+
+const frameworks = [
+  {
+    title: 'Porter\'s Five Forces',
+    description: 'Analyze competitive intensity and profitability of an industry. Essential for understanding market structure.',
+    href: '/frameworks/porters-five-forces',
+    icon: '⚔️',
+    tags: ['Competition', 'Analysis']
+  },
+  {
+    title: 'VRIO Framework',
+    description: 'Evaluate competitive advantage by assessing resources and capabilities (Value, Rarity, Imitability, Organization).',
+    href: '/frameworks/vrio',
+    icon: '💎',
+    tags: ['Resources', 'Advantage']
+  },
+  {
+    title: 'Blue Ocean Strategy',
+    description: 'Create uncontested market spaces by combining differentiation and low-cost strategies.',
+    href: '/frameworks/blue-ocean',
+    icon: '🌊',
+    tags: ['Strategy', 'Innovation']
+  },
+  {
+    title: 'SWOT Analysis',
+    description: 'Comprehensive assessment of Strengths, Weaknesses, Opportunities, and Threats for strategic planning.',
+    href: '/frameworks/swot-analysis',
+    icon: '📋',
+    tags: ['Planning', 'Analysis']
+  },
+  {
+    title: 'Balanced Scorecard',
+    description: 'Translate vision and strategy into measurable objectives across financial, customer, process, and learning perspectives.',
+    href: '/frameworks/balanced-scorecard',
+    icon: '⚖️',
+    tags: ['Metrics', 'Execution']
+  },
+  {
+    title: 'McKinsey 7S Framework',
+    description: 'Examine organizational alignment across Strategy, Structure, Systems, Skills, Style, Staff, and Shared Values.',
+    href: '/frameworks/mckinsey-7s',
+    icon: '🔗',
+    tags: ['Organization', 'Alignment']
+  },
+  {
+    title: 'Business Model Canvas',
+    description: 'Visualize and design business models through nine key components of value creation and delivery.',
+    href: '/frameworks/business-model-canvas',
+    icon: '🎨',
+    tags: ['Model', 'Design']
+  },
+  {
+    title: 'Ansoff Matrix',
+    description: 'Guide growth strategy through market and product combinations: penetration, development, diversification.',
+    href: '/frameworks/ansoff-matrix',
+    icon: '📈',
+    tags: ['Growth', 'Strategy']
+  },
+  {
+    title: 'Value Chain Analysis',
+    description: 'Identify sources of competitive advantage by examining primary and support activities in your business.',
+    href: '/frameworks/value-chain',
+    icon: '🔄',
+    tags: ['Operations', 'Value']
+  }
+];
+---
+
+<BaseLayout title="Frameworks" description="Strategic frameworks and methodologies for executive decision-making">
+  {/* Hero Section */}
+  <section class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Strategic Frameworks</h1>
+      <p class="text-xl text-slate-300">
+        Proven methodologies and frameworks for strategic analysis, planning, and execution.
+      </p>
+    </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Framework Library</h2>
+        <p class="text-slate-600">
+          Master the essential frameworks used by top strategists and business leaders worldwide.
+        </p>
+      </div>
+      <CardGrid cards={frameworks} columns={3} />
+    </div>
+  </section>
+</BaseLayout>

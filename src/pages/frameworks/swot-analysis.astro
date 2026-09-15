@@ -1,0 +1,75 @@
+---
+import FrameworkLayout from '../../layouts/FrameworkLayout.astro';
+
+const sections = ['Overview', 'The Four Quadrants', 'Conducting a SWOT Analysis', 'Strategic Application', 'Common Pitfalls'];
+---
+
+<FrameworkLayout title="SWOT Analysis" sections={sections}>
+  <h1 id="overview">SWOT Analysis</h1>
+  
+  <h2 id="overview">Overview</h2>
+  <p>
+    SWOT Analysis is a foundational strategic planning framework that helps organizations assess their current position by examining internal and external factors. It provides a structured approach to understanding competitive dynamics and identifying strategic opportunities.
+  </p>
+  <p>
+    Despite its simplicity, SWOT remains one of the most widely used frameworks for strategic assessment and planning.
+  </p>
+
+  <h2 id="the-four-quadrants">The Four Quadrants</h2>
+  
+  <h3>Strengths (S) - Internal, Positive</h3>
+  <p>
+    Internal capabilities and resources that provide competitive advantage. Examples: strong brand, talented team, proprietary technology, efficient operations, loyal customer base.
+  </p>
+
+  <h3>Weaknesses (W) - Internal, Negative</h3>
+  <p>
+    Internal limitations that place you at a disadvantage. Examples: limited resources, outdated technology, weak brand, skill gaps, organizational inefficiencies.
+  </p>
+
+  <h3>Opportunities (O) - External, Positive</h3>
+  <p>
+    External trends or conditions that could benefit your organization. Examples: emerging markets, regulatory changes, technological advances, shifting customer preferences, industry consolidation.
+  </p>
+
+  <h3>Threats (T) - External, Negative</h3>
+  <p>
+    External factors that could harm your organization. Examples: new competitors, market saturation, changing regulations, economic downturns, disruption by new technologies.
+  </p>
+
+  <h2 id="conducting-a-swot-analysis">Conducting a SWOT Analysis</h2>
+  <ol>
+    <li>Assemble cross-functional team with diverse perspectives</li>
+    <li>Research your industry, market, and competitive landscape</li>
+    <li>Brainstorm for each quadrant—quantity over quality initially</li>
+    <li>Prioritize items by impact and likelihood</li>
+    <li>Group related items into themes</li>
+    <li>Develop strategic responses for each category</li>
+    <li>Document findings and share across organization</li>
+  </ol>
+
+  <h2 id="strategic-application">Strategic Application</h2>
+  <p>
+    <strong>Matching:</strong> Leverage strengths to capitalize on opportunities. "How can we use our advantages to enter new markets?"
+  </p>
+  <p>
+    <strong>Converting:</strong> Use strengths to mitigate threats. "How can we defend against competitive threats using our capabilities?"
+  </p>
+  <p>
+    <strong>Correcting:</strong> Address weaknesses that expose you to threats. "Which weaknesses leave us vulnerable?"
+  </p>
+  <p>
+    <strong>Creating:</strong> Minimize weaknesses to pursue opportunities. "What capabilities must we build to capture opportunities?"
+  </p>
+
+  <h2 id="common-pitfalls">Common Pitfalls</h2>
+  <ul>
+    <li>Being too internal-focused; neglecting external factors</li>
+    <li>Including too many generic items; lack of specificity</li>
+    <li>Failing to prioritize; treating all items equally</li>
+    <li>One-time analysis; not updating as environment changes</li>
+    <li>Analysis without action; conducting SWOT but not acting on findings</li>
+    <li>Confusing opportunities with strategies</li>
+    <li>Not involving enough stakeholder perspectives</li>
+  </ul>
+</FrameworkLayout>

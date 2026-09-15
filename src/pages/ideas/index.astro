@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardGrid from '../components/CardGrid.astro';
+
+const ideas = [
+  {
+    title: 'The Art of Strategic Thinking',
+    description: 'Explore the principles and practices that distinguish strategic thinkers from operational managers.',
+    href: '/ideas/strategic-thinking',
+    icon: '🎯',
+    tags: ['Strategy', 'Leadership']
+  },
+  {
+    title: 'Digital Transformation Challenges',
+    description: 'Understanding the common pitfalls and success factors in executing digital transformation initiatives.',
+    href: '/ideas/digital-transformation',
+    icon: '🚀',
+    tags: ['Technology', 'Innovation']
+  },
+  {
+    title: 'Data-Driven Decision Making',
+    description: 'How to build a culture of data-driven decision making in your organization.',
+    href: '/ideas/data-driven-decisions',
+    icon: '📊',
+    tags: ['Data', 'Analytics']
+  },
+  {
+    title: 'Building High-Performance Teams',
+    description: 'Leadership practices for assembling and nurturing teams that consistently outperform.',
+    href: '/ideas/high-performance-teams',
+    icon: '👥',
+    tags: ['Leadership', 'Culture']
+  },
+  {
+    title: 'Market Disruption & Adaptation',
+    description: 'How companies can anticipate and adapt to market disruptions while maintaining competitive advantage.',
+    href: '/ideas/market-disruption',
+    icon: '⚡',
+    tags: ['Markets', 'Strategy']
+  },
+  {
+    title: 'Innovation Portfolio Management',
+    description: 'Strategies for balancing incremental innovation with breakthrough initiatives.',
+    href: '/ideas/innovation-portfolio',
+    icon: '🔧',
+    tags: ['Innovation', 'Execution']
+  }
+];
+---
+
+<BaseLayout title="Ideas" description="Articles and perspectives on business strategy, leadership, and innovation">
+  {/* Hero Section */}
+  <section class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Ideas & Perspectives</h1>
+      <p class="text-xl text-slate-300">
+        Articles and insights on strategy, leadership, innovation, and executive decision-making.
+      </p>
+    </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Browse Ideas</h2>
+        <p class="text-slate-600">
+          Explore our curated collection of articles and perspectives designed to inspire and inform strategic thinking.
+        </p>
+      </div>
+      <CardGrid cards={ideas} columns={3} />
+    </div>
+  </section>
+</BaseLayout>

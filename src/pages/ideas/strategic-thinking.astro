@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const idea = {
+  title: 'The Art of Strategic Thinking',
+  date: '2026-09-15',
+  category: 'Strategy',
+  excerpt: 'Explore the principles and practices that distinguish strategic thinkers from operational managers.'
+};
+---
+
+<BaseLayout title={idea.title} description={idea.excerpt}>
+  <article class="py-16">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="mb-8">
+        <div class="flex gap-4 mb-4 text-sm">
+          <span class="text-slate-500">{idea.date}</span>
+          <span class="text-blue-600 font-semibold">{idea.category}</span>
+        </div>
+        <h1 class="text-4xl font-bold mb-4 text-slate-900">{idea.title}</h1>
+        <p class="text-xl text-slate-600">{idea.excerpt}</p>
+      </div>
+
+      <div class="prose prose-slate max-w-none">
+        <h2>What is Strategic Thinking?</h2>
+        <p>
+          Strategic thinking is the ability to see the big picture, understand interconnections, and make decisions that position an organization for long-term success. It's distinct from operational thinking, which focuses on executing current plans efficiently.
+        </p>
+
+        <h2>Key Principles of Strategic Thinkers</h2>
+        <h3>1. Systems Perspective</h3>
+        <p>
+          Strategic thinkers understand how decisions in one area affect others. They see interdependencies between markets, customers, competitors, and internal capabilities.
+        </p>
+
+        <h3>2. Long-term Orientation</h3>
+        <p>
+          While respecting near-term performance, strategic thinkers prioritize decisions that create sustainable competitive advantage. They think in 3-5 year horizons and beyond.
+        </p>
+
+        <h3>3. Questioning Assumptions</h3>
+        <p>
+          Strategic thinkers challenge conventional wisdom. They ask "why" repeatedly and explore unconventional possibilities rather than accepting industry norms.
+        </p>
+
+        <h3>4. Customer and Market Focus</h3>
+        <p>
+          Deep understanding of customer needs, market dynamics, and competitive positioning forms the foundation of strategic decisions.
+        </p>
+
+        <h3>5. Comfort with Ambiguity</h3>
+        <p>
+          Strategic decisions must often be made with incomplete information. Strategic thinkers develop hypotheses, test them, and adjust rather than waiting for perfect data.
+        </p>
+
+        <h2>Developing Strategic Thinking</h2>
+        <ul>
+          <li>Read widely across industries, history, and disciplines</li>
+          <li>Engage in strategic dialogues with peers and mentors</li>
+          <li>Study case studies of strategic success and failure</li>
+          <li>Practice frameworks like Porter's Five Forces and SWOT</li>
+          <li>Develop comfort with scenario planning and uncertainty</li>
+          <li>Seek diverse perspectives from inside and outside your organization</li>
+          <li>Reflect regularly on strategic decisions and outcomes</li>
+        </ul>
+
+        <h2>Common Barriers to Strategic Thinking</h2>
+        <ul>
+          <li><strong>Operational Overwhelm:</strong> Too focused on immediate problems to think strategically</li>
+          <li><strong>Organizational Silos:</strong> Lack of cross-functional dialogue limits systems perspective</li>
+          <li><strong>Short-term Pressure:</strong> Quarterly earnings focus can crowd out long-term thinking</li>
+          <li><strong>Confirmation Bias:</strong> Seeking information that confirms existing views rather than challenging them</li>
+          <li><strong>Risk Aversion:</strong> Avoiding strategic experiments due to fear of failure</li>
+        </ul>
+
+        <h2>The Strategic Thinking Process</h2>
+        <p>
+          Effective strategic thinking follows a cycle of understanding, analysis, decision-making, and learning:
+        </p>
+        <ol>
+          <li><strong>Sense:</strong> Observe market trends, competitive moves, and organizational capabilities</li>
+          <li><strong>Analyze:</strong> Apply frameworks to understand dynamics and identify key drivers</li>
+          <li><strong>Envision:</strong> Imagine future scenarios and desired end states</li>
+          <li><strong>Decide:</strong> Make choices about strategic direction and resource allocation</li>
+          <li><strong>Communicate:</strong> Build alignment across the organization</li>
+          <li><strong>Execute:</strong> Implement strategic initiatives and build capabilities</li>
+          <li><strong>Learn:</strong> Monitor results, gather feedback, and adjust</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

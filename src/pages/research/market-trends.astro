@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const research = {
+  title: 'Market Trends 2024-2025',
+  date: '2026-09-15',
+  category: 'Market Analysis',
+  excerpt: 'Comprehensive analysis of emerging market trends, consumer behavior shifts, and industry dynamics.'
+};
+---
+
+<BaseLayout title={research.title} description={research.excerpt}>
+  <article class="py-16">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="mb-8">
+        <div class="flex gap-4 mb-4 text-sm">
+          <span class="text-slate-500">{research.date}</span>
+          <span class="text-blue-600 font-semibold">{research.category}</span>
+        </div>
+        <h1 class="text-4xl font-bold mb-4 text-slate-900">{research.title}</h1>
+        <p class="text-xl text-slate-600">{research.excerpt}</p>
+      </div>
+
+      <div class="prose prose-slate max-w-none">
+        <h2>Executive Summary</h2>
+        <p>
+          The global business environment continues to evolve rapidly, shaped by technological advancement, geopolitical tensions, and changing consumer expectations. Organizations must navigate these shifts strategically to maintain competitive advantage.
+        </p>
+
+        <h2>Key Market Trends</h2>
+        
+        <h3>1. AI and Automation Acceleration</h3>
+        <p>
+          Artificial intelligence adoption is accelerating across industries, from customer service to drug discovery. Organizations investing in AI capabilities today are positioning themselves for significant competitive advantage.
+        </p>
+        <ul>
+          <li>GenAI tools becoming mainstream in enterprise workflows</li>
+          <li>Skills gap creating talent competition</li>
+          <li>Regulatory frameworks emerging across regions</li>
+          <li>Integration challenges with legacy systems</li>
+        </ul>
+
+        <h3>2. Sustainability as Competitive Necessity</h3>
+        <p>
+          ESG considerations are no longer optional. Investors, customers, and regulators increasingly factor environmental and social performance into decisions.
+        </p>
+        <ul>
+          <li>Supply chain transparency becoming mandatory</li>
+          <li>Carbon pricing mechanisms expanding globally</li>
+          <li>Consumer preference for sustainable brands growing</li>
+          <li>Regulatory requirements increasing complexity</li>
+        </ul>
+
+        <h3>3. Hybrid Work Maturation</h3>
+        <p>
+          Remote work has become permanent for many organizations. The focus has shifted from enabling remote work to optimizing hybrid models and maintaining culture.
+        </p>
+        <ul>
+          <li>Office redesign for collaboration and connection</li>
+          <li>Talent attraction through flexibility</li>
+          <li>Time zone coordination challenges</li>
+          <li>Measuring productivity and engagement</li>
+        </ul>
+
+        <h3>4. Supply Chain Resilience Focus</h3>
+        <p>
+          Lessons from recent disruptions have led organizations to prioritize supply chain resilience over pure efficiency.
+        </p>
+        <ul>
+          <li>Nearshoring and diversification strategies</li>
+          <li>Real-time visibility and monitoring</li>
+          <li>Supplier relationship deepening</li>
+          <li>Inventory buffers increasing</li>
+        </ul>
+
+        <h2>Consumer Behavior Shifts</h2>
+        <ul>
+          <li><strong>Personalization Expectations:</strong> Customers expect hyper-personalized experiences across all touchpoints</li>
+          <li><strong>Value Consciousness:</strong> Even affluent consumers seek value and are comparing options</li>
+          <li><strong>Experience Premium:</strong> Willingness to pay for convenient, seamless experiences</li>
+          <li><strong>Purpose Alignment:</strong> Brand values increasingly influence purchase decisions</li>
+          <li><strong>Digital-First Expectations:</strong> Seamless online and offline integration required</li>
+        </ul>
+
+        <h2>Industry-Specific Implications</h2>
+        <p>
+          Different industries face unique challenges and opportunities. Strategic responses must be tailored to industry dynamics while leveraging these broad trends.
+        </p>
+
+        <h2>Strategic Recommendations</h2>
+        <ol>
+          <li>Invest in AI capabilities aligned with customer value creation</li>
+          <li>Build supply chain resilience and transparency</li>
+          <li>Develop sustainability strategy integrated with business model</li>
+          <li>Create hybrid work model supporting productivity and culture</li>
+          <li>Enhance customer experience through personalization and omnichannel integration</li>
+          <li>Build organizational agility to respond to continued uncertainty</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

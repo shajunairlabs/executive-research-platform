@@ -1,0 +1,23 @@
+---
+interface Props {
+  sections: string[];
+}
+
+const { sections } = Astro.props;
+---
+
+<div class="sticky top-24 bg-slate-100 rounded-lg p-6 h-fit">
+  <h3 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">On this page</h3>
+  <ul class="space-y-3">
+    {sections.map((section) => (
+      <li>
+        <a
+          href={`#${section.toLowerCase().replace(/\s+/g, '-')}`}
+          class="text-sm text-slate-600 hover:text-slate-900 transition-colors block py-1 border-l-2 border-slate-300 hover:border-slate-600 pl-3"
+        >
+          {section}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>

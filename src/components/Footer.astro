@@ -1,0 +1,37 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-slate-200 bg-white mt-16">
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <h3 class="font-bold text-slate-900 mb-4">Collections</h3>
+        <ul class="space-y-2">
+          <li><a href="/ideas" class="text-slate-600 hover:text-slate-900 transition-colors">Articles & Perspectives</a></li>
+          <li><a href="/frameworks" class="text-slate-600 hover:text-slate-900 transition-colors">Frameworks</a></li>
+          <li><a href="/research" class="text-slate-600 hover:text-slate-900 transition-colors">Research Notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-slate-900 mb-4">Resources</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Documentation</a></li>
+          <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Archive</a></li>
+          <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Subscribe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-slate-900 mb-4">Connect</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Twitter</a></li>
+          <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">LinkedIn</a></li>
+          <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-200 pt-8 text-center text-slate-600 text-sm">
+      <p>&copy; {currentYear} Executive Research Platform. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

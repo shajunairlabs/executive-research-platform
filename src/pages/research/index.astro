@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardGrid from '../components/CardGrid.astro';
+
+const research = [
+  {
+    title: 'Market Trends 2024-2025',
+    description: 'Comprehensive analysis of emerging market trends, consumer behavior shifts, and industry dynamics.',
+    href: '/research/market-trends',
+    icon: '📊',
+    tags: ['Markets', 'Trends']
+  },
+  {
+    title: 'AI and Automation Impact',
+    description: 'Research on how artificial intelligence and automation are reshaping business models and competitive landscapes.',
+    href: '/research/ai-automation',
+    icon: '🤖',
+    tags: ['Technology', 'AI']
+  },
+  {
+    title: 'ESG and Sustainability',
+    description: 'Data-driven insights on Environmental, Social, and Governance factors affecting corporate value and risk.',
+    href: '/research/esg-sustainability',
+    icon: '🌱',
+    tags: ['Sustainability', 'Risk']
+  },
+  {
+    title: 'Remote Work Evolution',
+    description: 'Case studies and research on the long-term impacts of remote work on productivity, culture, and innovation.',
+    href: '/research/remote-work',
+    icon: '💼',
+    tags: ['Work', 'Culture']
+  },
+  {
+    title: 'Supply Chain Resilience',
+    description: 'Analysis of supply chain vulnerabilities and strategies for building more resilient and adaptive systems.',
+    href: '/research/supply-chain',
+    icon: '🔗',
+    tags: ['Operations', 'Resilience']
+  },
+  {
+    title: 'Customer Experience Innovation',
+    description: 'Research on next-generation customer experience strategies and their impact on brand loyalty and revenue.',
+    href: '/research/customer-experience',
+    icon: '😊',
+    tags: ['Customer', 'Innovation']
+  }
+];
+---
+
+<BaseLayout title="Research" description="Research notes, case studies, and data-driven insights">
+  {/* Hero Section */}
+  <section class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Research & Insights</h1>
+      <p class="text-xl text-slate-300">
+        Case studies, research notes, and data-driven insights to inform strategic decisions.
+      </p>
+    </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Research Library</h2>
+        <p class="text-slate-600">
+          Explore curated research, case studies, and evidence-based insights on critical business topics.
+        </p>
+      </div>
+      <CardGrid cards={research} columns={3} />
+    </div>
+  </section>
+</BaseLayout>

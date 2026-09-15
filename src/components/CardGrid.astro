@@ -1,0 +1,52 @@
+---
+interface CardItem {
+  title: string;
+  description: string;
+  href: string;
+  icon?: string;
+  tags?: string[];
+}
+
+interface Props {
+  cards: CardItem[];
+  columns?: 2 | 3 | 4;
+}
+
+const { cards, columns = 3 } = Astro.props;
+
+const gridClass = {
+  2: 'grid-cols-1 md:grid-cols-2',
+  3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+  4: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
+};
+---
+
+<div class={`grid gap-6 ${gridClass[columns]}`}>
+  {cards.map((card) => (
+    <a
+      href={card.href}
+      class="group block p-6 bg-white border border-slate-200 rounded-lg hover:shadow-lg hover:border-slate-300 transition-all duration-200"
+    >
+      {card.icon && (
+        <div class="text-3xl mb-4 group-hover:scale-110 transition-transform duration-200">
+          {card.icon}
+        </div>
+      )}
+      <h3 class="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+        {card.title}
+      </h3>
+      <p class="text-slate-600 text-sm mb-4">
+        {card.description}
+      </p>
+      {card.tags && (
+        <div class="flex flex-wrap gap-2">
+          {card.tags.map((tag) => (
+            <span class="inline-block bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </a>
+  ))}
+</div>

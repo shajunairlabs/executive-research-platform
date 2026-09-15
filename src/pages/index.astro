@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardGrid from '../components/CardGrid.astro';
+
+const heroCards = [
+  {
+    title: 'Explore Ideas',
+    description: 'Discover articles, perspectives, and insights on business strategy, technology, and innovation.',
+    href: '/ideas',
+    icon: '💡',
+    tags: ['Articles', 'Perspectives']
+  },
+  {
+    title: 'Learn Frameworks',
+    description: 'Deep-dive into proven frameworks and methodologies for strategic thinking and decision-making.',
+    href: '/frameworks',
+    icon: '📐',
+    tags: ['Frameworks', 'Methodologies']
+  },
+  {
+    title: 'Research Notes',
+    description: 'Curated research, case studies, and data-driven insights for informed executive decision-making.',
+    href: '/research',
+    icon: '🔬',
+    tags: ['Research', 'Case Studies']
+  }
+];
+---
+
+<BaseLayout title="Home" description="Executive Research Platform - Ideas, Frameworks, and Research">
+  {/* Hero Section */}
+  <section class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          Executive Research Platform
+        </h1>
+        <p class="text-xl text-slate-300 mb-8">
+          A curated collection of ideas, frameworks, and research designed to support strategic thinking and informed decision-making for executives and leaders.
+        </p>
+        <div class="flex gap-4">
+          <a href="/frameworks" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+            Explore Frameworks
+          </a>
+          <a href="/ideas" class="px-6 py-3 border border-slate-400 hover:bg-slate-700 rounded-lg font-semibold transition-colors">
+            Read Articles
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Main Content */}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Start Here</h2>
+        <p class="text-slate-600 text-lg">
+          Choose your path through our curated collections of executive research and strategic frameworks.
+        </p>
+      </div>
+      <CardGrid cards={heroCards} columns={3} />
+    </div>
+  </section>
+
+  {/* Featured Section */}
+  <section class="py-16 bg-slate-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-slate-900 mb-12">Featured Collections</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-slate-200">
+          <h3 class="text-xl font-bold text-slate-900 mb-4">Strategic Frameworks</h3>
+          <p class="text-slate-600 mb-6">
+            Master proven frameworks like Porter's Five Forces, VRIO Analysis, and Blue Ocean Strategy to guide your strategic decisions.
+          </p>
+          <a href="/frameworks" class="text-blue-600 hover:text-blue-700 font-semibold">
+            View All Frameworks →
+          </a>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-slate-200">
+          <h3 class="text-xl font-bold text-slate-900 mb-4">Latest Research</h3>
+          <p class="text-slate-600 mb-6">
+            Stay informed with the latest research insights, market analysis, and data-driven perspectives on industry trends.
+          </p>
+          <a href="/research" class="text-blue-600 hover:text-blue-700 font-semibold">
+            Explore Research →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

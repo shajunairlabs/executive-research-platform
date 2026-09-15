@@ -1,30 +1,21 @@
-# build
-/dist/
-/build/
-
-# generated types
+# Astro
 .astro/
+dist/
 
-# dependencies
+# Node
 node_modules/
+package-lock.json
+yarn.lock
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# environment variables
-.env
-.env.local
-.env.*.local
-
-# macOS
-.DS_Store
-
-# editors
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local

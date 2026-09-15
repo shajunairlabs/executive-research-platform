@@ -1,28 +1,77 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Sidebar from '../components/FrameworkSidebar.astro';
+import FrameworkSidebar from '../components/FrameworkSidebar.astro';
 
 interface Props {
   title: string;
-  description?: string;
   sections: string[];
 }
 
-const { title, description, sections } = Astro.props;
+const { title, sections } = Astro.props;
 ---
 
-<BaseLayout {title} {description}>
-  <div class="container mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-      {/* Sidebar */}
-      <aside class="lg:col-span-1">
-        <Sidebar {sections} />
-      </aside>
-      
-      {/* Main Content */}
-      <article class="lg:col-span-3 prose prose-slate max-w-none">
-        <slot />
-      </article>
+<BaseLayout title={title} description={`Learn about ${title} - a strategic framework for executive decision-making`}>
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        {/* Main Content */}
+        <div class="lg:col-span-3">
+          <article class="prose prose-slate max-w-none">
+            <slot />
+          </article>
+        </div>
+
+        {/* Sidebar */}
+        <aside class="lg:col-span-1">
+          <FrameworkSidebar sections={sections} />
+        </aside>
+      </div>
     </div>
-  </div>
+  </section>
 </BaseLayout>
+
+<style>
+  :global(.prose) {
+    --tw-prose-body: rgb(71, 85, 105);
+    --tw-prose-headings: rgb(15, 23, 42);
+    --tw-prose-links: rgb(37, 99, 235);
+    --tw-prose-bold: rgb(15, 23, 42);
+    --tw-prose-code: rgb(226, 232, 240);
+    --tw-prose-hr: rgb(226, 232, 240);
+    --tw-prose-th-borders: rgb(203, 213, 225);
+    --tw-prose-td-borders: rgb(226, 232, 240);
+  }
+
+  :global(.prose h1) {
+    @apply text-4xl font-bold mb-8 mt-0;
+  }
+
+  :global(.prose h2) {
+    @apply text-2xl font-bold mt-8 mb-4;
+  }
+
+  :global(.prose h3) {
+    @apply text-xl font-bold mt-6 mb-3;
+  }
+
+  :global(.prose p) {
+    @apply mb-4 text-slate-700;
+  }
+
+  :global(.prose ul),
+  :global(.prose ol) {
+    @apply mb-6 ml-6;
+  }
+
+  :global(.prose li) {
+    @apply mb-2;
+  }
+
+  :global(.prose a) {
+    @apply text-blue-600 hover:text-blue-700 font-semibold;
+  }
+
+  :global(.prose strong) {
+    @apply font-bold text-slate-900;
+  }
+</style>

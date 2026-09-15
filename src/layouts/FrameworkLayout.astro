@@ -1,0 +1,28 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Sidebar from '../components/FrameworkSidebar.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  sections: string[];
+}
+
+const { title, description, sections } = Astro.props;
+---
+
+<BaseLayout {title} {description}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      {/* Sidebar */}
+      <aside class="lg:col-span-1">
+        <Sidebar {sections} />
+      </aside>
+      
+      {/* Main Content */}
+      <article class="lg:col-span-3 prose prose-slate max-w-none">
+        <slot />
+      </article>
+    </div>
+  </div>
+</BaseLayout>
